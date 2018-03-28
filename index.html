@@ -8,8 +8,11 @@
     <title>Document</title>
     <!-- favicon should always be at root of project -->
     <!-- <link rel="icon" type="image/png" href="/somewhere/myicon.png" /> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="./assets/styles/styles.css">
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
 </head>
 
 <body>
@@ -17,31 +20,82 @@
         <div class="container">
             <div class="jumbotron">
                 <h1>Employee Data Management</h1> 
-                <h3>A Comprehensive Directory of Employee Billable Hours</h3> 
+                <h5>A Comprehensive Directory of Employee Billable Hours</h5> 
             </div>
         </div>
     </header>
 
     <main>
-        <p class="p-tag">This is our index file</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="panel no-gutters panel-primary">
+                        <div class="panel-heading">
+                            <p class="panel-title">Current Employees</p>
+                        </div>
+                        <div class="panel-body"> 
+                            <div class="row column-headings">
+                                    <div class="col-md-2 col-xs-6">
+                                        <p>Employee Name</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-6">
+                                        <p>Role</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-6">
+                                        <p>Start Date</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-6">
+                                        <p>Months Worked</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-6">
+                                        <p>Monthly Rate ($)</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-6">
+                                        <p>Total Billed ($)</p>
+                                    </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="container">
+            <!-- Add Employee  -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><strong>Add Employee</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <!-- Entry Form -->
+                    <form>
+                        <div class="form-group">
+                        <label for="employee-name-input">Employee Name</label>
+                        <input class="form-control" id="employee-name-input" type="text">
+                        </div>
+                        <div class="form-group">
+                        <label for="role-input">Role</label>
+                        <input class="form-control" id="role-input" type="text">
+                        </div>
+                        <div class="form-group">
+                        <label for="start-input">Start Date (DD/MM/YY - ex: 01/01/89)</label>
+                        <input class="form-control" id="start-input" type="text">
+                        </div>
+                        <div class="form-group">
+                        <label for="rate-input">Monthly Rate</label>
+                        <input class="form-control" id="rate-input" type="text">
+                        </div>
+                        <button class="btn btn-primary" id="add-employee-btn" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script>
+    <script src="./assets/scripts/index.js"></script>
 
-        setTimeout(function() {
-            clearInterval(timeOutFunction);
-        }, 5000);
-       
-       const timeOutFunction = setInterval(function(){
-           console.log("This is a second interval")
-       }, 1000);
-
-       timeOutFunction();
-
-    </script>
 </body>
 
 </html>
