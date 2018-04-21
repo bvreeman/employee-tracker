@@ -18,46 +18,28 @@
 <body>
     <header>
         <div class="container">
-            <div class="jumbotron">
-                <h1>Employee Data Management</h1> 
-                <h5>A Comprehensive Directory of Employee Billable Hours</h5> 
+              <!-- Current Employees-->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Current Employees</strong></h3>
             </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-xs-12">
-                    <div class="panel no-gutters panel-primary">
-                        <div class="panel-heading">
-                            <p class="panel-title">Current Employees</p>
-                        </div>
-                        <div class="panel-body"> 
-                            <div class="row column-headings">
-                                    <div class="col-md-2 col-xs-6">
-                                        <p>Employee Name</p>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <p>Role</p>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <p>Start Date</p>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <p>Months Worked</p>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <p>Monthly Rate ($)</p>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <p>Total Billed ($)</p>
-                                    </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
+            <div class="panel-body">
+                <table class="table table-hover" id='employee-table'>
+                <thead>
+                    <tr>
+                    <th>Employee Name</th>
+                    <th>Role</th>
+                    <th>Start Date</th>
+                    <th>Months Worked</th>
+                    <th>Monthly Rate ($)</th>
+                    <th>Total Billed ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
             </div>
+            </div>    
         </div>  
         <div class="container">
             <!-- Add Employee  -->
